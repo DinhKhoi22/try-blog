@@ -19,8 +19,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar currentUser={currentUser} />
-        {children}
+        <div className="flex flex-col relative">
+          <Navbar currentUser={currentUser} />
+          <Image
+            src={'/background.jpg'}
+            alt="backgroundImage"
+            width={1440}
+            height={1024}
+            className="static-background w-screen h-screen bg-gradient-to-br from-pink-200 via-transparent to-transparent bg-lightgray bg-center bg-cover"
+          />
+          <div className="absolute w-full">{children}</div>
+        </div>
       </body>
     </html>
   );

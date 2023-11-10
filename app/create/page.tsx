@@ -49,7 +49,7 @@ export default function CreatePage() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="w-[600px] h-[700px] mx-auto py-12">
+    <form onSubmit={onSubmit} className="w-[600px] h-[700px] mx-auto py-24">
       <div>
         <ImageUpload value={state.imageSrc} onChange={(value) => setCustomValue('imageSrc', value)} />
       </div>
@@ -63,7 +63,7 @@ export default function CreatePage() {
           name="description"
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className='text-white mt-4 p-3 border hover:bg-gray-500'>Submit</button>
       </div>
     </form>
   );

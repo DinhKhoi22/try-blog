@@ -12,8 +12,8 @@ interface UserMenuProps {
 
 const Navbar: FC<UserMenuProps> = ({ currentUser }) => {
   return (
-    <div>
-      <nav className="bg-gray-200 flex justify-between px-14 py-6 shadow-xl">
+    <div className='z-10'>
+      <nav className="text-white flex justify-between px-14 py-6 shadow-xl">
         <Link href={'/'}>{currentUser?.name}</Link>
         <div className="flex gap-x-12">
           <Link href={'/'}>Home</Link>

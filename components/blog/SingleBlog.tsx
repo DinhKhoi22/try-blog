@@ -32,10 +32,12 @@ export default function SingleBlog({ key, data, currentUser }: BlogProps) {
   };
 
   return (
-    <div className="w-[1100px] border-2 p-4">
+    <div className="w-[1100px] border-2 p-4 bg-gradient-to-r from-red-200 mb-6">
       <div>
-        <div className="flex gap-2 justify-between items-center">
-          <Image src={data.imageSrc} width={400} height={300} alt="Blog Image" />
+        <div className="flex gap-2 justify-between items-center text-amber-950">
+          <div className="border-4 border-slate-900">
+            <Image src={data.imageSrc} width={400} height={300} alt="Blog Image" />
+          </div>
 
           <div className="w-[530px] flex flex-col gap-4 leading-[1.5]">
             <h1>{data.name}</h1>
@@ -44,7 +46,7 @@ export default function SingleBlog({ key, data, currentUser }: BlogProps) {
         </div>
 
         {data.userId === currentUser?.id && (
-          <div className='flex items-center gap-6 mt-4'>
+          <div className="flex items-center gap-6 mt-4">
             <RiDeleteBin5Line onClick={onDelete} className="text-red-600 cursor-pointer text-[1.5rem]" />
             <BsFillPencilFill
               onClick={() => router.push(`/blogs/${data.id}`)}

@@ -44,7 +44,7 @@ const Page = () => {
   };
 
   return (
-    <form className="text-center" onSubmit={onSubmit}>
+    <form className="text-center mt-12" onSubmit={onSubmit}>
       <div className="flex flex-col justify-center h-[450px] w-[350px] mx-auto gap-2">
         <Input placeholder="Email" id="email" type="email" name="email" onChange={handleChange} value={state.email} />
         <Input
@@ -55,12 +55,20 @@ const Page = () => {
           onChange={handleChange}
           value={state.password}
         />
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="text-white mt-4 p-3 border bg-gradient-to-r from-red-400 to-blue-400 hover:from-pink-500 hover:to-yellow-500"
+        >
+          Submit
+        </button>
       </div>
 
       <div>
-        <div>
-          Haven&apos;t you got an account yet ? <Link href={'/register'}>Register</Link>
+        <div className="text-white">
+          Haven&apos;t you got an account yet ?{' '}
+          <Link href={'/register'}>
+            <p className="hover:text-slate-300">Register</p>
+          </Link>
         </div>
       </div>
     </form>

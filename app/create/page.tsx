@@ -63,7 +63,12 @@ export default function CreatePage() {
           name="description"
           onChange={handleChange}
         />
-        <button type="submit" className='text-white mt-4 p-3 border hover:bg-gray-500'>Submit</button>
+        <button
+          type="submit"
+          className="text-white mt-4 p-3 border bg-gradient-to-r from-red-400 to-blue-400 hover:from-pink-500 hover:to-yellow-500"
+        >
+          Submit
+        </button>
       </div>
     </form>
   );

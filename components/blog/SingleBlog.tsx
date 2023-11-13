@@ -34,7 +34,7 @@ export default function SingleBlog({ key, data, currentUser }: BlogProps) {
   return (
     <div className="w-[1100px] border-2 p-4 bg-gradient-to-r from-red-200 mb-6">
       <div>
-        <div className="flex gap-2 justify-between items-center text-amber-950">
+        <div className="flex gap-2 justify-between items-center text-white">
           <div className="border-4 border-slate-900">
             <Image src={data.imageSrc} width={400} height={300} alt="Blog Image" />
           </div>

@@ -76,7 +76,7 @@ const BlogId: FC<BlogIdProps> = ({ name, description, imageSrc, blogId }: BlogId
   };
 
   return (
-    <div className="w-[500px] mx-auto py-16 bg-blue-200 px-12 flex flex-col gap-4">
+    <div className="w-[500px] mx-auto py-16 bg-blue-200 px-12 flex flex-col gap-4 mt-24">
       <div className="flex flex-col border-b-2 ">
         <span>{name}</span>
       </div>
@@ -86,7 +86,7 @@ const BlogId: FC<BlogIdProps> = ({ name, description, imageSrc, blogId }: BlogId
       <div>
         <Image src={imageSrc} alt="Blog Image" width={400} height={400} />
       </div>
-      <div className="flex justify-center gap-2">
+      <div className="flex justify-center gap-12">
         <button onClick={() => setOnActive(!onActive)} className="uppercase">
           edit
         </button>
@@ -100,7 +100,7 @@ const BlogId: FC<BlogIdProps> = ({ name, description, imageSrc, blogId }: BlogId
           <div>
             <ImageUpload value={state.imageSrc} onChange={(value) => setCustomValue('imageSrc', value)} />
           </div>
-          <div className="flex flex-col justify-center h-[450px] w-[350px] mx-auto gap-2">
+          <div className="flex flex-col justify-center h-[250px] w-[350px] mx-auto gap-2">
             <Input placeholder="Name" id="name" type="text" value={state.name} name="name" onChange={handleChange} />
             <Input
               placeholder="Description"
@@ -111,7 +111,7 @@ const BlogId: FC<BlogIdProps> = ({ name, description, imageSrc, blogId }: BlogId
               onChange={handleChange}
             />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" className='w-full p-4'>Submit</button>
         </form>
       )}
     </div>

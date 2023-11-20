@@ -1,7 +1,6 @@
 import SingleBlog from '@/components/blog/SingleBlog';
 import getCurrentUser from './actions/getCurrentUser';
 import getListing from './actions/getListing';
-import Link from 'next/link';
 
 export default async function Home() {
   const currentUser = await getCurrentUser();
